@@ -1,8 +1,10 @@
 {
   "pages": [
     "pages/index/main",
-    "pages/logs/main",
-    "pages/counter/main"
+    "pages/counter/main",
+    "pages/mine/main",
+    "pages/message/main",
+    "pages/square/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -22,8 +24,20 @@
       "iconPath": "static/tabs/home.png",
       "selectedIconPath": "static/tabs/home-active.png"
     }, {
-      "text": "订单",
-      "pagePath": "pages/logs/main",
+      "text": "广场",
+      "pagePath": "pages/square/main",
+      "iconPath": "static/tabs/orders.png",
+      "selectedIconPath": "static/tabs/orders-active.png"
+    },
+    {
+      "text": "消息",
+      "pagePath": "pages/message/main",
+      "iconPath": "static/tabs/orders.png",
+      "selectedIconPath": "static/tabs/orders-active.png"
+    },
+    {
+      "text": "我的",
+      "pagePath": "pages/mine/main",
       "iconPath": "static/tabs/orders.png",
       "selectedIconPath": "static/tabs/orders-active.png"
     }],
@@ -33,9 +47,22 @@
       "pagePath": "pages/index/main",
       "icon": "static/tabs/home.png",
       "activeIcon": "static/tabs/home-active.png"
-    }, {
-      "name": "订单",
-      "pagePath": "pages/logs/main",
+    },
+    {
+      "name": "广场",
+      "pagePath": "pages/square/main",
+      "icon": "static/tabs/orders.png",
+      "activeIcon": "static/tabs/orders-active.png"
+    },
+    {
+      "name": "消息",
+      "pagePath": "pages/message/main",
+      "icon": "static/tabs/home.png",
+      "activeIcon": "static/tabs/orders-activepng"
+    },
+    {
+      "name": "我的",
+      "pagePath": "pages/mine/main",
       "icon": "static/tabs/orders.png",
       "activeIcon": "static/tabs/orders-active.png"
     }],
