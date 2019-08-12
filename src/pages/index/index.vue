@@ -1,15 +1,8 @@
 <template>
-  <div @click="clickHandle">
-
-    <div class="userinfo" @click="bindViewTap">
-      <img class="userinfo-avatar" src="/static/images/user.png" background-size="cover" />
-      <div class="userinfo-nickname">
-        <card :text="userInfo.nickName"></card>
-      </div>
+  <div class="index page-ontainer" @click="clickHandle">
+    <div class="list">
+      <card v-for="item in list" :info="item" :key="item.id"></card>
     </div>
-
-    <a href="/pages/counter/main" class="counter">去往Vuex示例页面</a>
-
   </div>
 </template>
 
@@ -19,10 +12,30 @@ import card from '@/components/card'
 export default {
   data () {
     return {
-      userInfo: {
-        nickName: 'mpvue',
-        avatarUrl: 'http://mpvue.com/assets/img/logo.0aaccdfd.png'
-      }
+      list: [
+        {
+          id: 10001,
+          name: 'Carol',
+          certifyStatus: false,
+          introLength: 30,
+          sex: 'male',
+          address: '上海',
+          age: '93年',
+          school: '上海大学',
+          url: '/static/images/user.png'
+        },
+        {
+          id: 10002,
+          name: '我的名字',
+          certifyStatus: false,
+          introLength: 120,
+          sex: 'female',
+          address: '上海',
+          age: '93年',
+          school: '上海大学',
+          url: '/static/images/face.jpg'
+        }
+      ]
     }
   },
 
@@ -31,14 +44,6 @@ export default {
   },
 
   methods: {
-    bindViewTap () {
-      const url = '../logs/main'
-      if (mpvuePlatform === 'wx') {
-        mpvue.switchTab({ url })
-      } else {
-        mpvue.navigateTo({ url })
-      }
-    },
     clickHandle (ev) {
       console.log('clickHandle:', ev)
       // throw {message: 'custom test'}
@@ -52,21 +57,10 @@ export default {
 </script>
 
 <style scoped>
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: #aaa;
+.page-ontainer {
+  background: #eee;
+  min-height: 100%;
+  overflow: scroll;
 }
 
 </style>
