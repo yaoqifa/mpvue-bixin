@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "比心单身"
+  "navigationBarTitleText": "比心单身",
+  "window": {
+    "enablePullDownRefresh": true
+  }
 }
